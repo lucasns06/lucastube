@@ -9,7 +9,7 @@ const Sidebar = () => {
     const { sidebarIsOpen } = useSidebar();
 
     const menuItems = [
-        { icon: faHouse, label: 'Inicio' },
+        { icon: faHouse, label: 'Inicio', href: '/' },
         { icon: faBell, label: 'Shorts' },
         { icon: faArchive, label: 'Inscrições' },
         { icon: faUser, label: 'Você' }
@@ -79,7 +79,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="container">
                 {menuItems.map((item, index) => (
-                    <span
+                    <a href='/'
                         key={index}
                         className={`closedSpan ${sidebarIsOpen ? 'openSpan' : ''}`}
                     >
@@ -92,7 +92,7 @@ const Sidebar = () => {
                         <p className={sidebarIsOpen ? 'text-lg' : 'text-xs'}>
                             {item.label}
                         </p>
-                    </span>
+                    </a>
 
                 ))}
             </div>

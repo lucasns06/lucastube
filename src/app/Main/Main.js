@@ -4,13 +4,16 @@ import Link from 'next/link';
 import { useSidebar } from '../SidebarContext';
 import './Main.css'
 import { useVideo } from '../VideoContext';
+import { useLoading } from '../LoadingContext';
 const Main = () => {
+    const { setLoading } = useLoading(); // Importe o hook
+
     const { sidebarIsOpen } = useSidebar();
     const { videos, setSelectedVideo } = useVideo();
     return (
         <div className={`videos__container p-6 grid gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
             {videos.map((item) => (
-                <Link  href={`/Dynamic?id=${item.id}`}  className="video__card" key={item.id} onClick={() => setSelectedVideo(item.id)}>
+                <Link href={`/Dynamic?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
                     <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
                     <div className="desc flex mt-2 gap-2">
                         <img className='rounded-full' src={item.logo} alt="logo" />

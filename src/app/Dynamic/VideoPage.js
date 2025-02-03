@@ -5,10 +5,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faArrowAltCircleDown, faArrowDown, faBell } from "@fortawesome/free-solid-svg-icons";
 import './VideoPage.css'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useLoading } from '../LoadingContext';
 
 const VideoPage = () => {
+    const { setLoading } = useLoading(); 
+
+    useEffect(() => {
+        setLoading(false);
+    }, [setLoading]);
+    
     const searchParams = useSearchParams();
     const videoId = parseInt(searchParams.get('id'));
 
@@ -17,11 +24,11 @@ const VideoPage = () => {
     const videoDesc = useRef();
     const videoSelected = videos.find((item) => item.id === videoId);
 
-    function abrirDesc(){
+    function abrirDesc() {
         videoDesc.current.style.height = "max-content"
         videoDesc.current.style.overflow = "visible"
     }
-    function fecharDesc(){
+    function fecharDesc() {
         videoDesc.current.style.height = "92px"
         videoDesc.current.style.overflow = "hidden"
     }
