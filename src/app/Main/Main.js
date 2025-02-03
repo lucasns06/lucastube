@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-
+import Link from 'next/link';
 import { useSidebar } from '../SidebarContext';
 import './Main.css'
 const Main = () => {
@@ -59,7 +59,7 @@ const Main = () => {
     return (
         <div className={`videos__container p-6 grid gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
             {videos.map((item, index) => (
-                <div className="video__card" key={index}>
+                <Link  href='/Dynamic' className="video__card" key={index}>
                     <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
                     <div className="desc flex mt-2 gap-2">
                         <img className='rounded-full' src={item.logo} alt="logo" />
@@ -69,50 +69,7 @@ const Main = () => {
                             <p>{item.visu} mil visualizações</p>
                         </div>
                     </div>
-
-                </div>
-            ))}
-            {videos.map((item, index) => (
-                <div className="video__card" key={index}>
-                    <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                    <div className="desc flex mt-2 gap-2">
-                        <img className='rounded-full' src={item.logo} alt="logo" />
-                        <div className="container__texto">
-                            <h1>{item.titulo}</h1>
-                            <p>{item.canal}</p>
-                            <p>{item.visu} mil visualizações</p>
-                        </div>
-                    </div>
-
-                </div>
-            ))}
-            {videos.map((item, index) => (
-                <div className="video__card" key={index}>
-                    <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                    <div className="desc flex mt-2 gap-2">
-                        <img className='rounded-full' src={item.logo} alt="logo" />
-                        <div className="container__texto">
-                            <h1>{item.titulo}</h1>
-                            <p>{item.canal}</p>
-                            <p>{item.visu} mil visualizações</p>
-                        </div>
-                    </div>
-
-                </div>
-            ))}
-            {videos.map((item, index) => (
-                <div className="video__card" key={index}>
-                    <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                    <div className="desc flex mt-2 gap-2">
-                        <img className='rounded-full' src={item.logo} alt="logo" />
-                        <div className="container__texto">
-                            <h1>{item.titulo}</h1>
-                            <p>{item.canal}</p>
-                            <p>{item.visu} mil visualizações</p>
-                        </div>
-                    </div>
-
-                </div>
+                </Link >
             ))}
         </div>
     )

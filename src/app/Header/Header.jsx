@@ -2,7 +2,7 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowCircleUp, faBars, faBell, faMartiniGlass } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from "../SidebarContext";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className="flex items-center justify-between px-[12] py-[4]">
             <div className="flex gap-4">
-                <button className="px-[13]" onClick={toggleSidebar}>
+                <button className="menu px-[13]" onClick={toggleSidebar}>
                     <FontAwesomeIcon className="text-2xl" icon={faBars} color="white" />
                 </button>
                 <a href="/">
@@ -36,10 +36,10 @@ const Header = () => {
                     </svg>
                 </a>
             </div>
-            <div className="search flex items-center">
-                <input type="text" placeholder="Pesquisar" />
+            <div className="search flex items-center ">
+                <input className="px-[12]" type="text" placeholder="Pesquisar" />
                 <button className="lupa px-[12]">
-                    <FontAwesomeIcon icon={faMartiniGlass} width={32} height={32} color="white" />
+                    <FontAwesomeIcon icon={faSearch} width={32} height={32} color="white" />
                 </button>
             </div>
             <div className="options flex items-center gap-2">

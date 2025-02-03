@@ -2,7 +2,7 @@
 import './Sidebar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArchive, faArrowDown, faBell, faBible, faEye, faFire, faFlag, faGamepad, faGear, faHouse, faMusic, faNewspaper, faQuestion, faTrophy, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArchive, faArrowDown, faBell, faBible, faClock, faEye, faFire, faFlag, faGamepad, faGear, faHouse, faMusic, faNewspaper, faQuestion, faReply, faThumbsUp, faTrophy, faTv, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from '../SidebarContext';
 
 const Sidebar = () => {
@@ -11,8 +11,15 @@ const Sidebar = () => {
     const menuItems = [
         { icon: faHouse, label: 'Inicio' },
         { icon: faBell, label: 'Shorts' },
-        { icon: faArchive, label: 'inscrições' },
+        { icon: faArchive, label: 'Inscrições' },
         { icon: faUser, label: 'Você' }
+    ];
+    const userItems = [
+        { icon: faReply, label: 'Histórico' },
+        { icon: faBell, label: 'Playlists' },
+        { icon: faTv, label: 'Seus vídeos' },
+        { icon: faClock, label: 'Assistir mais tarde' },
+        { icon: faThumbsUp, label: 'Videos com "Gostei"' }
     ];
 
     const subs = [
@@ -67,11 +74,30 @@ const Sidebar = () => {
         { icon: faQuestion, label: 'Ajuda' },
         { icon: faBible, label: 'Enviar Feedback' }
     ];
-    
+
     return (
         <div className="sidebar">
             <div className="container">
                 {menuItems.map((item, index) => (
+                    <span
+                        key={index}
+                        className={`closedSpan ${sidebarIsOpen ? 'openSpan' : ''}`}
+                    >
+                        <FontAwesomeIcon
+                            icon={item.icon}
+                            width={32}
+                            height={32}
+                            color="white"
+                        />
+                        <p className={sidebarIsOpen ? 'text-lg' : 'text-xs'}>
+                            {item.label}
+                        </p>
+                    </span>
+
+                ))}
+            </div>
+            <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
+                {userItems.map((item, index) => (
                     <span
                         key={index}
                         className={`closedSpan ${sidebarIsOpen ? 'openSpan' : ''}`}
@@ -119,6 +145,7 @@ const Sidebar = () => {
             </div>
 
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
+                <h1 className='p-[12] font-bold'>Explorar</h1>
                 {exploreItems.map((item, index) => (
                     <span
                         key={index}
@@ -137,6 +164,7 @@ const Sidebar = () => {
                 ))}
             </div>
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
+            <h1 className='p-[12] font-bold'>Mais do youtube</h1>
                 {options.map((item, index) => (
                     <span
                         key={index}

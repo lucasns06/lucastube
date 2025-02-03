@@ -10,10 +10,6 @@
 .thumb{
     aspect-ratio: 16/9;
 }
-.videos__resizer{
-    width: calc(100vw - 300.44px);
-    margin-left: 300.44px;
-}
 .desc img {
     width: 48px;
     height: 48px;

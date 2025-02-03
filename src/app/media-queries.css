@@ -1,18 +1,37 @@
 @media (max-width: 612px) {
-    .search{
+    .search input{
         display: none;
     }
-}
-@media (max-width: 580px) {
+    .lupa{
+        border-radius: 100%;
+        padding: 0;
+        background: none;
+        border: none;
+    }
     .sidebar{
         display: none;
     }
     .videos__container{
         width: 100%;
         margin: 56px auto;
+        padding: 0;
+    }
+    .thumb {
+        border-radius: 0;
     }
     .videos__resizer{
         width: 100%;
         margin-top: 56px;
     }
+    header .menu{
+        display: none;
+    }
+    .options{
+        display: none;
+    }
 }
+
+.videos__resizer{
+    width: calc(100vw - 300.44px);
+    margin-left: 300.44px;
+  }

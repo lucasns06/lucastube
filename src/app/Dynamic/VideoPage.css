@@ -1,0 +1,47 @@
+.video__page{
+    width: calc(100% - 72px);
+    margin-left: 72px;
+    margin-top: 56px;
+}
+.thumb__dynamic{
+    aspect-ratio: 16/9;
+    max-width: 200px;
+}
+.container__texto__dynamic h1{
+    font-weight: bold;
+}
+.video__options img {
+    width: 48px;
+    height: 48px;
+}
+.left{
+    width: 70%;
+    height: 100vh;
+}
+.video{
+    width: 1112px;
+    max-height: 668px;
+    aspect-ratio: 16 / 9;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 30%;
+}
+.inscrito{
+    background: var(--background-secondary);
+}
+.video__card__dynamic{
+    cursor: pointer;
+}
+.video__desc{
+    background: var(--background-secondary);
+    overflow: hidden;
+    height: 92px;
+    cursor: pointer;
+}
+.video__desc__abrido{
+    height: max-content;
+    overflow: visible;
+}
