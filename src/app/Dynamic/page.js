@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import Sidebar from "../Sidebar/Sidebar";
+// import Sidebar from "../Sidebar/Sidebar";
 import { SidebarProvider } from "../SidebarContext";
 import { VideoProvider } from "../VideoContext";
 import VideoPage from "./VideoPage";
@@ -8,11 +8,7 @@ export default function Home() {
   return (
     <div>
       <VideoProvider>
-        <SidebarProvider>
-          <Header />
-          <Sidebar />
           <VideoPage />
-        </SidebarProvider>
       </VideoProvider>
     </div>
   );
