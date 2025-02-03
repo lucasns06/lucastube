@@ -10,12 +10,12 @@ import { useSearchParams } from 'next/navigation';
 import { useLoading } from '../LoadingContext';
 
 const VideoPage = () => {
-    const { setLoading } = useLoading(); 
+    const { setLoading } = useLoading();
 
     useEffect(() => {
         setLoading(false);
     }, [setLoading]);
-    
+
     const searchParams = useSearchParams();
     const videoId = parseInt(searchParams.get('id'));
 
@@ -37,17 +37,19 @@ const VideoPage = () => {
         return <div>Carregando...</div>;
     }
     return (
-        <div className={`video__page flex pt-6 pl-20 pr-28 gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
+        <div className={`video__page flex gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
             <div className="left flex flex-col gap-2">
                 <img className='video' src={videoSelected.img} alt="video" />
                 <h1 className='font-bold text-2xl'>{videoSelected.titulo}</h1>
 
-                <div className="video__options flex gap-2 justify-between">
-                    <div className='flex gap-2 items-center'>
-                        <img className='rounded-full' src={videoSelected.logo} alt="logo" />
-                        <div>
-                            <h1 className='font-bold'>{videoSelected.canal}</h1>
-                            <p>UM bilhao de inscritos</p>
+                <div className="video__options gap-2 justify-between">
+                    <div className='video__options__sub gap-2 items-center'>
+                        <div className='flex gap-2'>
+                            <img className='rounded-full' src={videoSelected.logo} alt="logo" />
+                            <div>
+                                <h1 className='font-bold'>{videoSelected.canal}</h1>
+                                <p>UM bilhao de inscritos</p>
+                            </div>
                         </div>
                         <button className="inscrito rounded-3xl py-2">
                             <FontAwesomeIcon
@@ -65,7 +67,7 @@ const VideoPage = () => {
                             />
                         </button>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className='video__options__sub gap-2'>
                         <button className="inscrito rounded-3xl py-2 pr-2">
                             <FontAwesomeIcon
                                 icon={faBell}

@@ -1,7 +1,6 @@
 .video__page{
     width: calc(100% - 72px);
-    margin-left: 72px;
-    margin-top: 56px;
+    margin: 56px 72px;
 }
 .thumb__dynamic{
     aspect-ratio: 16/9;
@@ -9,6 +8,9 @@
 }
 .container__texto__dynamic h1{
     font-weight: bold;
+}
+.video__options, .video__options__sub{
+    display: flex;
 }
 .video__options img {
     width: 48px;
@@ -19,7 +21,6 @@
     height: 100vh;
 }
 .video{
-    width: 1112px;
     max-height: 668px;
     aspect-ratio: 16 / 9;
 }

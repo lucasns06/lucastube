@@ -1,3 +1,27 @@
+@media (max-width: 1280px) {
+    .right{
+        display: none;
+    }
+    .left{
+        width: 100%;
+    }
+    .video{
+        width: auto;
+    }
+    .video__page{
+        max-width: 100%;
+        width: calc(100% - 72px);
+        margin: 56px 72px;
+    }
+}
+@media (max-width: 812px) {
+    .video__options{
+        flex-direction: column;
+    }
+    .video__options__sub{
+        justify-content: space-between;
+    }
+}
 @media (max-width: 612px) {
     .search input{
         display: none;
@@ -28,6 +52,11 @@
     }
     .options{
         display: none;
+    }
+    .video__page{
+        max-width: 100%;
+        width: 100%;
+        margin: 56px 0;
     }
 }
 
