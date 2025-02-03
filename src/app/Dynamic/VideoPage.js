@@ -6,11 +6,17 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faArrowAltCircleDown, faArrowDown, faBell } from "@fortawesome/free-solid-svg-icons";
 import './VideoPage.css'
 import { useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const VideoPage = () => {
+    const searchParams = useSearchParams();
+    const videoId = parseInt(searchParams.get('id'));
+
     const { sidebarIsOpen } = useSidebar();
     const { videos } = useVideo();
     const videoDesc = useRef();
+    const videoSelected = videos.find((item) => item.id === videoId);
+
     function abrirDesc(){
         videoDesc.current.style.height = "max-content"
         videoDesc.current.style.overflow = "visible"
@@ -19,17 +25,21 @@ const VideoPage = () => {
         videoDesc.current.style.height = "92px"
         videoDesc.current.style.overflow = "hidden"
     }
+
+    if (!videoSelected) {
+        return <div>Carregando...</div>;
+    }
     return (
         <div className={`video__page flex pt-6 pl-20 pr-28 gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
             <div className="left flex flex-col gap-2">
-                <img className='video' src="/telaComunitec.jpg" alt="" />
-                <h1 className='font-bold text-2xl'>The Story (feat. Biffe & Hakuro)</h1>
+                <img className='video' src={videoSelected.img} alt="video" />
+                <h1 className='font-bold text-2xl'>{videoSelected.titulo}</h1>
 
                 <div className="video__options flex gap-2 justify-between">
                     <div className='flex gap-2 items-center'>
-                        <img className='rounded-full' src={"https://avatars.githubusercontent.com/u/170823502?v=4"} alt="logo" />
+                        <img className='rounded-full' src={videoSelected.logo} alt="logo" />
                         <div>
-                            <h1 className='font-bold'>Lucas LNS</h1>
+                            <h1 className='font-bold'>{videoSelected.canal}</h1>
                             <p>UM bilhao de inscritos</p>
                         </div>
                         <button className="inscrito rounded-3xl py-2">
@@ -80,7 +90,7 @@ const VideoPage = () => {
                 </div>
 
                 <div ref={videoDesc} className="video__desc rounded-xl p-2" onClick={abrirDesc}>
-                    <h1 className='font-bold'>Visualizações tempo atras</h1>
+                    <h1 className='font-bold'>{videoSelected.visu} mil visualizações</h1>
                     <p>descricao auau wolf miau</p>
                     <br /> <br />
 
