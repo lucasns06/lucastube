@@ -104,11 +104,14 @@ import Image from "next/image";
 import Header from "./Header/Header";
 import './media-queries.css'
 import Sidebar from "./Sidebar/Sidebar";
+import { SidebarProvider } from "./SidebarContext";
 export default function Home() {
   return (
     <div>
-      <Header />
-      <Sidebar />
+      <SidebarProvider>
+        <Header />
+        <Sidebar />
+      </SidebarProvider>
     </div>
   );
 }

@@ -1,18 +1,20 @@
+'use client'
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowAltCircleUp, faArrowCircleUp, faBars, faBell, faMartiniGlass } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
+import {  faArrowCircleUp, faBars, faBell, faMartiniGlass } from "@fortawesome/free-solid-svg-icons";
+import { useSidebar } from "../SidebarContext";
 
 const Header = () => {
+    const { toggleSidebar } = useSidebar();
     return (
         <header className="flex items-center justify-between px-[12] py-[4]">
             <div className="flex gap-4">
-                <button>
-                        <FontAwesomeIcon className="px-[6] text-xl" icon={faBars} color="white" />
+                <button className="px-[13]" onClick={toggleSidebar}>
+                        <FontAwesomeIcon className="text-2xl" icon={faBars} color="white" />
                 </button>
                 <svg
-                    width="128"
+                    width="92"
                     height="48"
                     viewBox="0 0 800 179"
                     fill="none"
