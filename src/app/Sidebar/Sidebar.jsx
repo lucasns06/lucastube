@@ -14,6 +14,7 @@ const Sidebar = () => {
         { icon: faArchive, label: 'inscrições' },
         { icon: faUser, label: 'Você' }
     ];
+
     const subs = [
         {
             url: "https://yt3.googleusercontent.com/m6s3UkM_8f4233Ayxq2NEyeJNmSMjZen3aPVhAKRyigEKi-Gw_sUMXysRA_WLEyuwq1Pw1fOVg=s160-c-k-c0x00ffffff-no-rj",
@@ -59,14 +60,14 @@ const Sidebar = () => {
         { icon: faNewspaper, label: 'Noticias' },
         { icon: faTrophy, label: 'Esportes' }
     ];
+
     const options = [
         { icon: faGear, label: 'Configurações' },
         { icon: faFlag, label: 'Histórico de denúncias' },
         { icon: faQuestion, label: 'Ajuda' },
         { icon: faBible, label: 'Enviar Feedback' }
     ];
-
-
+    
     return (
         <div className="sidebar">
             <div className="container">

@@ -1,4 +1,7 @@
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     overflow-y: auto;
     background: var(--background-primary);
     width: max-content;
@@ -6,6 +9,7 @@
     top: 56px;
     bottom: 0; 
     max-height: calc(100vh - 56px);
+    scrollbar-color: var(--background-secondary) transparent;
 }
 
 .closedSpan {
@@ -28,7 +32,6 @@
 .subs{
     display: none;
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
 }
 .openSubs{
     display: block;
