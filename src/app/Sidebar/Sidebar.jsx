@@ -90,7 +90,7 @@ const Sidebar = () => {
                 ))}
             </div>
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
-                <h1 className='p-[12] text-lg font-bold'>Inscrições</h1>
+                <h1 className='p-[12] font-bold'>Inscrições</h1>
                 {subs.map((item, index) => (
                     <span
                         key={index}
@@ -102,7 +102,7 @@ const Sidebar = () => {
                             width={32}
                             height={32}
                         />
-                        <p className={sidebarIsOpen ? 'text-lg' : 'text-xs'}>
+                        <p>
                             {item.label}
                         </p>
                     </span>
@@ -114,7 +114,7 @@ const Sidebar = () => {
                         height={32}
                         color="white"
                     />
-                    <p className='p-[12] text-lg '>Mostrar mais</p>
+                    <p className='p-[12]'>Mostrar mais</p>
                 </span>
             </div>
 
@@ -130,7 +130,7 @@ const Sidebar = () => {
                             height={32}
                             color="white"
                         />
-                        <p className={sidebarIsOpen ? 'text-lg' : 'text-xs'}>
+                        <p>
                             {item.label}
                         </p>
                     </span>
@@ -148,7 +148,7 @@ const Sidebar = () => {
                             height={32}
                             color="white"
                         />
-                        <p className={sidebarIsOpen ? 'text-lg' : 'text-xs'}>
+                        <p>
                             {item.label}
                         </p>
                     </span>

@@ -102,15 +102,17 @@
 
 import Image from "next/image";
 import Header from "./Header/Header";
-import './media-queries.css'
 import Sidebar from "./Sidebar/Sidebar";
 import { SidebarProvider } from "./SidebarContext";
+import Main from "./Main/Main";
+import './media-queries.css'
 export default function Home() {
   return (
     <div>
       <SidebarProvider>
         <Header />
         <Sidebar />
+        <Main />
       </SidebarProvider>
     </div>
   );

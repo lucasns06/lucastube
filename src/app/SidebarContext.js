@@ -11,7 +11,7 @@ export const SidebarProvider = ({ children }) => {
         console.log(sidebarIsOpen)
     }
     return (
-        <SidebarContext.Provider value={{ sidebarIsOpen, toggleSidebar  }}>
+        <SidebarContext.Provider value={{ sidebarIsOpen,setSidebar, toggleSidebar  }}>
             {children}
         </SidebarContext.Provider>
     );
