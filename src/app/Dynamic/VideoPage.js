@@ -12,10 +12,6 @@ import { useLoading } from '../LoadingContext';
 const VideoPage = () => {
     const { setLoading } = useLoading();
 
-    useEffect(() => {
-        setLoading(false);
-    }, [setLoading]);
-
     const searchParams = useSearchParams();
     const videoId = parseInt(searchParams.get('id'));
 
@@ -24,6 +20,16 @@ const VideoPage = () => {
     const videoDesc = useRef();
     const videoSelected = videos.find((item) => item.id === videoId);
 
+    useEffect(() => {
+        setLoading(false);
+    }, [setLoading]);
+
+    useEffect(() => {
+        if (videoSelected) {
+            document.title = `${videoSelected.titulo} - Meu YouTube Clone`;
+        }
+    }, [videoSelected]);
+    
     function abrirDesc() {
         videoDesc.current.style.height = "max-content"
         videoDesc.current.style.overflow = "visible"
@@ -36,6 +42,7 @@ const VideoPage = () => {
     if (!videoSelected) {
         return <div>Carregando...</div>;
     }
+    
     return (
         <div className={`video__page flex gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
             <div className="left flex flex-col gap-2">
@@ -147,4 +154,5 @@ const VideoPage = () => {
         </div>
     )
 }
+
 export default VideoPage;
