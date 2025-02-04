@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from "../SidebarContext";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Header = () => {
     const { toggleSidebar } = useSidebar();
@@ -20,7 +20,21 @@ const Header = () => {
         lupa.style.border = "1px solid gray";
         lupa.style.borderRadius = "0px 20px 20px 0px";
     }
+    useEffect(() => {
+        const handleScroll = () => {
+            const header = document.querySelector("header");
+            if (window.scrollY > 2) {
+                header.style.background = "var(--background-primary)";
+            } else {
+                header.style.background = "none";
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
 
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <header className="flex items-center justify-between px-[12] py-[4]">
             <div className="flex gap-4">

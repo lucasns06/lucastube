@@ -25,6 +25,19 @@ const Main = () => {
                     </div>
                 </Link >
             ))}
+            {videos.map((item) => (
+                <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
+                    <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
+                    <div className="desc flex mt-2 gap-2">
+                        <img className='rounded-full' src={item.logo} alt="logo" />
+                        <div className="container__texto">
+                            <h1>{item.titulo}</h1>
+                            <p>{item.canal}</p>
+                            <p>{item.visu} mil visualizações</p>
+                        </div>
+                    </div>
+                </Link >
+            ))}
         </div>
     )
 }
