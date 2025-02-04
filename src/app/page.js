@@ -1,5 +1,4 @@
 import Header from "./Header/Header";
-// import Sidebar from "./Sidebar/Sidebar";
 import { SidebarProvider } from "./SidebarContext";
 import Main from "./Main/Main";
 import './media-queries.css'
@@ -13,10 +12,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <VideoProvider>
-          {/* <Sidebar /> */}
           <Main />
-      </VideoProvider>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import LoadingBar from "./Loading/LoadingBar";
 import { LoadingProvider } from "./LoadingContext";
 import Sidebar from "./Sidebar/Sidebar";
 import { SidebarProvider } from "./SidebarContext";
+import { VideoProvider } from './VideoContext';
 
 export const metadata = {
   title: "LucasTube",
@@ -18,14 +19,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <SidebarProvider>
-          <LoadingProvider>
-            <LoadingBar />
-            <Sidebar />
-            <Header />
-            {children}
-          </LoadingProvider>
-        </SidebarProvider>
+        <VideoProvider>
+          <SidebarProvider>
+            <LoadingProvider>
+              <LoadingBar />
+              <Sidebar />
+              <Header />
+              {children}
+            </LoadingProvider>
+          </SidebarProvider>
+        </VideoProvider>
       </body>
     </html>
   );

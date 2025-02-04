@@ -72,7 +72,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${sidebarIsOpen ? "sidebarOpen" : ""}`}>
             <div className="container">
                 {menuItems.map((item, index) => (
                     <a href={item.href}

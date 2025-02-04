@@ -1,6 +1,6 @@
 .video__page{
     width: calc(100% - 72px);
-    margin: 56px 72px;
+    margin: 48px 72px;
 }
 .thumb__dynamic{
     width: 100%;
@@ -20,8 +20,25 @@
 .left{
     width: 70%;
     height: 100vh;
+    position: relative;
+}
+.blur{
+    position: absolute;
+    content: '';
+    width: 101%;
+    height: 63%;
+    top: -30;
+    left: 0;
+    z-index: 0;
+    background-color: var(--background-secondary);
+    opacity: 0.8;
+    filter: blur(40px);
+}
+.blurOpacity{
+    opacity: 0;
 }
 .video{
+    z-index: 1;
     max-height: 668px;
     aspect-ratio: 16 / 9;
 }

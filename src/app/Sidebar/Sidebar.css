@@ -3,16 +3,17 @@
     flex-direction: column;
     gap: 8px;
     overflow-y: auto;
-    background: var(--background-primary);
     width: max-content;
     position: fixed;
-    top: 56px;
+    top: 48px;
     bottom: 0; 
     max-height: calc(100vh - 56px);
     scrollbar-color: var(--background-secondary) transparent;
     z-index: 3;
 }
-
+.sidebarOpen{
+    background: var(--background-primary);
+}
 .closedSpan {
     display: flex;
     flex-direction: column;
