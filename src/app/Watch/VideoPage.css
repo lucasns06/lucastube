@@ -3,6 +3,7 @@
     margin: 56px 72px;
 }
 .thumb__dynamic{
+    width: 100%;
     aspect-ratio: 16/9;
     max-width: 200px;
 }

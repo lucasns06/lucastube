@@ -46,6 +46,7 @@ export const VideoProvider = ({ children }) => {
             id: 4,
             img: "/telaNCS.jpg",
             titulo: "Elektronomia & JJD - Free | House | NCS - Copyright Free Music",
+            video: "https://www.youtube.com/embed/9Va88Kt0NN0?si=X44vOQxRWS75DQxH",
             canal: "NoCopyrightSounds",
             visu: "76",
             duracao: "24:07",
@@ -69,6 +70,16 @@ export const VideoProvider = ({ children }) => {
             visu: "57",
             duracao: "1:02",
             logo: "https://avatars.githubusercontent.com/u/170823502?v=4"
+        },
+        {
+            id: 7,
+            img: "https://i.ytimg.com/vi/Qq_nttXD7dg/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBbXZ8LEM5kUWKfK7ZNI_dL71_Rug",
+            video: "https://www.youtube.com/embed/9wexGFSDLmM?si=elgxR33ush2yqEVh",
+            titulo: "Stray: Cool down (Sheet Music 6)",
+            canal: "EnviloN",
+            visu: "78",
+            duracao: "1:02",
+            logo: "https://yt3.ggpht.com/ytc/AIdro_kI_qs9lFLDrv3O0Kj01M2wuRm__wcOoGTFheoCmTcUvA=s48-c-k-c0x00ffffff-no-rj"
         },
     ]
     const [selectedVideo, setSelectedVideo] = useState(null);

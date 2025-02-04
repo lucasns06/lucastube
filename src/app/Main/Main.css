@@ -8,6 +8,7 @@
     cursor: pointer;
 }
 .thumb{
+    width: 100%;
     aspect-ratio: 16/9;
 }
 .desc img {

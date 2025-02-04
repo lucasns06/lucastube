@@ -16,7 +16,7 @@ const VideoPage = () => {
     const searchParams = useSearchParams();
     const videoId = parseInt(searchParams.get('id'));
 
-    const { sidebarIsOpen } = useSidebar();
+    const { sidebarIsOpen, toggleSidebar } = useSidebar();
     const { videos } = useVideo();
     const videoSelected = videos.find((item) => item.id === videoId);
 
@@ -39,15 +39,17 @@ const VideoPage = () => {
     if (!videoSelected) {
         return <div>Carregando...</div>;
     }
-
+    if(sidebarIsOpen){
+        document.body.style.overflow = "hidden";
+    }else{
+        document.body.style.overflow = "auto";
+    }
     return (
-        <div className={`video__page flex gap-4 ${sidebarIsOpen ? "videos__resizer" : ""}`}>
+        <div className={`video__page flex gap-4`}>
+            {sidebarIsOpen ? <div className='overlay'  onClick={toggleSidebar}></div> : ""}
             <div className="left flex flex-col gap-2">
                 {videoSelected.video ? (
-                    <video className="video" controls>
-                        <source src={videoSelected.video} type="video/mp4" />
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
+                    <iframe className="video" src={videoSelected.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 ) : (
                     <img className="video" src={videoSelected.img} alt="video" />
                 )}
