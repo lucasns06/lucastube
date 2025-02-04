@@ -45,6 +45,7 @@ const VideoPage = () => {
     } else {
         document.body.style.overflow = "auto";
     }
+
     return (
         <div className={`video__page flex gap-4`}>
             {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}
@@ -63,7 +64,7 @@ const VideoPage = () => {
                             <img className='rounded-full' src={videoSelected.logo} alt="logo" />
                             <div>
                                 <h1 className='font-bold'>{videoSelected.canal}</h1>
-                                <p className='text-gray-400'>{parseInt(videoSelected.visu) + Math.floor(Math.random() * (80 - 2) + 2)} mil inscritos</p>
+                                <p className='text-gray-400'>{parseInt(videoSelected.visu) + 57} mil inscritos</p>
                             </div>
                         </div>
                         <button className="inscrito rounded-3xl py-2">
@@ -114,15 +115,16 @@ const VideoPage = () => {
                 </div>
                 <div className={`video__desc rounded-xl p-2 ${descIsOpen ? "openedDesc" : ""}`} onClick={toggleDesc}>
                     <h1 className='font-bold'>{videoSelected.visu} mil visualizações</h1>
-                    <p>descricao testando lucastube</p>
+                    
+                    <p>{videoSelected.desc ? videoSelected.desc : "Esse vídeo não tem descrição"}</p>
                     <br /> <br />
 
-                    <p>Essa é a descrição do video</p>
+                    <p>LucasTube, recriação do Youtube para aprender um pouco do NextJS</p>
                     <br /> <br />
 
                     <h1 className='text-2xl font-bold'>Transcrição</h1>
                     <p>Acompanhe usando a transcrição.</p>
-
+                    <br />
                     <p className='font-bold' >Mostrar Menos</p>
                 </div>
             </div>
