@@ -63,7 +63,7 @@ const VideoPage = () => {
                             <img className='rounded-full' src={videoSelected.logo} alt="logo" />
                             <div>
                                 <h1 className='font-bold'>{videoSelected.canal}</h1>
-                                <p>UM bilhao de inscritos</p>
+                                <p className='text-gray-400'>{parseInt(videoSelected.visu) + Math.floor(Math.random() * (80 - 2) + 2)} mil inscritos</p>
                             </div>
                         </div>
                         <button className="inscrito rounded-3xl py-2">

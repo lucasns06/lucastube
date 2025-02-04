@@ -8,12 +8,13 @@ export const VideoProvider = ({ children }) => {
     const videos = [
         {
             id: 0,
-            img: "/telaJogando.jpg",
-            titulo: "Os vazamentos dos leaks - GTA V #55",
-            canal: "Jogandofoddaci",
-            visu: "12",
-            duracao: "24:07",
-            logo: "https://yt3.googleusercontent.com/VHLV1lDgJjdGmcSWVinGn-_wgVHRYOzGaRyI4js3OHyf5AZ0qBA5JZkFm6UQQgwGyEYzJHtcVnQ=s160-c-k-c0x00ffffff-no-rj"
+            img: "https://i.ytimg.com/vi/gRBq7fPITxw/maxresdefault.jpg",
+            titulo: "Through the Valley",
+            video: "https://www.youtube.com/embed/gRBq7fPITxw?si=3VlkYHi8KnaCS5Wh",
+            canal: "Shawn James",
+            visu: "911",
+            duracao: "3:40",
+            logo: "https://yt3.ggpht.com/guCzucD8MQ7Nm7oflykSMPEWrZATU07OuHxgmnbLYj0asPwCmcspGksXjOrWddZkADLj7PZRyA=s48-c-k-c0x00ffffff-no-rj"
         },
         {
             id: 1,
