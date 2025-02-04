@@ -47,3 +47,14 @@
     height: max-content;
     overflow: visible;
 }
+.video__icons{
+    top: 4px;
+    left: 165px;
+    opacity: 0;
+}
+.video__icons svg{
+    background: rgba(0, 0, 0, 0.8);
+}
+.video__card__dynamic:hover .video__icons{
+    opacity: 1;
+}

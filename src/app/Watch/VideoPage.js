@@ -3,7 +3,7 @@ import { useSidebar } from '../SidebarContext';
 import { useVideo } from '../VideoContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowAltCircleDown, faArrowDown, faBell } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleDown, faArrowDown, faBars, faBell, faClock } from "@fortawesome/free-solid-svg-icons";
 import './VideoPage.css'
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -39,14 +39,16 @@ const VideoPage = () => {
     if (!videoSelected) {
         return <div>Carregando...</div>;
     }
-    if(sidebarIsOpen){
+    if (sidebarIsOpen) {
         document.body.style.overflow = "hidden";
-    }else{
+    } else {
         document.body.style.overflow = "auto";
     }
+    const teste = document.querySelector('.sidebar');
+
     return (
         <div className={`video__page flex gap-4`}>
-            {sidebarIsOpen ? <div className='overlay'  onClick={toggleSidebar}></div> : ""}
+            {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}
             <div className="left flex flex-col gap-2">
                 {videoSelected.video ? (
                     <iframe className="video" src={videoSelected.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -127,7 +129,23 @@ const VideoPage = () => {
             </div>
             <div className="right">
                 {videos.map((item, index) => (
-                    <Link href={`/Watch?id=${item.id}`} className="video__card__dynamic flex gap-2" key={index}>
+                    <Link href={`/Watch?id=${item.id}`} className="video__card__dynamic flex gap-2 relative" key={index}>
+                        <div className="video__icons absolute flex flex-col gap-2">
+                            <FontAwesomeIcon
+                                className='py-2 rounded-lg'
+                                icon={faClock}
+                                width={32}
+                                height={32}
+                                color="white"
+                            />
+                            <FontAwesomeIcon
+                                className='py-2 rounded-lg'
+                                icon={faBars}
+                                width={32}
+                                height={32}
+                                color="white"
+                            />
+                        </div>
                         <img src={item.img} className="thumb__dynamic rounded-2xl" alt='thumb' />
                         <div className="container__texto__dynamic">
                             <h1>{item.titulo}</h1>
