@@ -21,7 +21,7 @@
     width: 72px;
     border-radius: 16px;
 }
-.sidebar span:hover{
+.sidebar span:hover, .sidebar a:hover{
     background: var(--background-secondary);
 }
 .openSpan{

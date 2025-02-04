@@ -79,7 +79,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="container">
                 {menuItems.map((item, index) => (
-                    <a href='/'
+                    <a href={item.href}
                         key={index}
                         className={`closedSpan ${sidebarIsOpen ? 'openSpan' : ''}`}
                     >

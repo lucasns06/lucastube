@@ -60,6 +60,16 @@ export const VideoProvider = ({ children }) => {
             duracao: "24:07",
             logo: "https://avatars.githubusercontent.com/u/170823502?v=4"
         },
+        {
+            id: 6,
+            img: "/telaComunica.png",
+            video: "/videoComunica.mp4",
+            titulo: "Meu Aplicativo para o TCC",
+            canal: "Lucas LNS",
+            visu: "57",
+            duracao: "1:02",
+            logo: "https://avatars.githubusercontent.com/u/170823502?v=4"
+        },
     ]
     const [selectedVideo, setSelectedVideo] = useState(null);
 
