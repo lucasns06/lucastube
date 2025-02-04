@@ -10,3 +10,7 @@ LucasTube é um projeto de recriar o youtube para fins de aprendizado front end.
 - Nextjs
 - Reactjs
 
+## Aprendizados
+
+- useContext Hook
+- Nextjs Routing
