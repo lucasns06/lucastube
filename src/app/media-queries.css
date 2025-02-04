@@ -1,3 +1,12 @@
+.videos__resizer {
+    width: calc(100vw - 300.44px);
+    margin-left: 277px;
+}
+
+.videos__resizer__page {
+    width: calc(100vw - 300.44px);
+    margin-left: 277px;
+}
 @media (max-width: 1280px) {
     .right {
         width: 40%;
@@ -68,6 +77,10 @@
         width: 100%;
         margin-top: 56px;
     }
+    .videos__resizer__page {
+        width: 100%;
+        margin-top: 56px;
+    }
 
     header .menu {
         display: none;
@@ -82,14 +95,4 @@
         width: 100%;
         margin: 56px 0;
     }
-}
-
-.videos__resizer {
-    width: calc(100vw - 300.44px);
-    margin-left: 300.44px;
-}
-
-.videos__resizer__page {
-    width: calc(100vw - 300.44px);
-    margin-left: 277px;
 }

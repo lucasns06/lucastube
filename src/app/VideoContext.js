@@ -73,13 +73,33 @@ export const VideoProvider = ({ children }) => {
         },
         {
             id: 7,
-            img: "https://i.ytimg.com/vi/Qq_nttXD7dg/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBbXZ8LEM5kUWKfK7ZNI_dL71_Rug",
+            img: "https://i.ytimg.com/vi/9wexGFSDLmM/maxresdefault.jpg",
             video: "https://www.youtube.com/embed/9wexGFSDLmM?si=elgxR33ush2yqEVh",
             titulo: "Stray: Cool down (Sheet Music 6)",
             canal: "EnviloN",
             visu: "78",
             duracao: "1:02",
             logo: "https://yt3.ggpht.com/ytc/AIdro_kI_qs9lFLDrv3O0Kj01M2wuRm__wcOoGTFheoCmTcUvA=s48-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            id: 8,
+            img: "https://i.ytimg.com/vi/TSLRScqwemI/maxresdefault.jpg",
+            video: "https://www.youtube.com/embed/TSLRScqwemI?si=86ZDM9DUcp_89Feq",
+            titulo: "Nunca Paro (feat. Biffe & Hakuro)",
+            canal: "King's Studio",
+            visu: "187",
+            duracao: "2:15",
+            logo: "https://yt3.ggpht.com/x05rSpQOFaTY66Ul6NUWN6KbgCRuzlqz2mXJmAGLWna9s1KVgIXRAghqdHUY68RbSogd2laUdw=s48-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            id: 9,
+            img: "https://i.ytimg.com/vi/mWQsiK0hAxI/sddefault.jpg",
+            video: "https://www.youtube.com/embed/mWQsiK0hAxI?si=U54HVuZc1pYB3y5K",
+            titulo: "Sidoka, ouhboy - Quadro [Vizual by Dnzk]",
+            canal: "Sidoka",
+            visu: "187",
+            duracao: "2:15",
+            logo: "https://yt3.ggpht.com/rTygqdhIhpbjU55YR1iX-1n7-KAvb-tvov69JGs8sMxbmofYQWFCSJvxLeL5_55hcGpdemwnsw=s48-c-k-c0x00ffffff-no-rj"
         },
     ]
     const [selectedVideo, setSelectedVideo] = useState(null);
