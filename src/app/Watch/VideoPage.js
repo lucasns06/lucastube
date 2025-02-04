@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faArrowAltCircleDown, faArrowDown, faBars, faBell, faClock } from "@fortawesome/free-solid-svg-icons";
 import './VideoPage.css'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLoading } from '../LoadingContext';
 import Link from 'next/link';
@@ -18,6 +18,7 @@ const VideoPage = () => {
 
     const { sidebarIsOpen, toggleSidebar } = useSidebar();
     const { videos } = useVideo();
+    
     const videoSelected = videos.find((item) => item.id === videoId);
 
     useEffect(() => {
@@ -44,8 +45,6 @@ const VideoPage = () => {
     } else {
         document.body.style.overflow = "auto";
     }
-    const teste = document.querySelector('.sidebar');
-
     return (
         <div className={`video__page flex gap-4`}>
             {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}

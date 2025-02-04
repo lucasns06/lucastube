@@ -4,9 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from "../SidebarContext";
+import { useRef } from "react";
 
 const Header = () => {
     const { toggleSidebar } = useSidebar();
+    const buscaInput = useRef();
+    const lupaButton = useRef();
+
+    function mostrarBusca() {
+        const busca = buscaInput.current;
+        busca.style.display = "block"
+
+        const lupa = lupaButton.current;
+        lupa.style.background = "var(--background-secondary)";
+        lupa.style.border = "1px solid gray";
+        lupa.style.borderRadius = "0px 20px 20px 0px";
+    }
+    
     return (
         <header className="flex items-center justify-between px-[12] py-[4]">
             <div className="flex gap-4">
@@ -23,8 +37,8 @@ const Header = () => {
                 </a>
             </div>
             <div className="search flex items-center ">
-                <input className="px-[12]" type="text" placeholder="Pesquisar" />
-                <button className="lupa px-[12]">
+                <input ref={buscaInput} className="px-[12]" type="text" placeholder="Pesquisar" />
+                <button ref={lupaButton} className="lupa px-[12]" onClick={mostrarBusca}>
                     <FontAwesomeIcon icon={faSearch} width={32} height={32} color="white" />
                 </button>
             </div>

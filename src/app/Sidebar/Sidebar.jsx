@@ -51,10 +51,6 @@ const Sidebar = () => {
             url: "https://yt3.googleusercontent.com/ytc/AIdro_kLR5Wl0-838WZwpNJ9P90bpbAhHA5iZePEX1UDG1SlbL8=s160-c-k-c0x00ffffff-no-rj",
             label: "Stackz / Gustavo Pinheiro"
         },
-        {
-            url: "https://yt3.googleusercontent.com/VHLV1lDgJjdGmcSWVinGn-_wgVHRYOzGaRyI4js3OHyf5AZ0qBA5JZkFm6UQQgwGyEYzJHtcVnQ=s160-c-k-c0x00ffffff-no-rj",
-            label: "jogandofoddaci"
-        },
     ]
 
     const exploreItems = [

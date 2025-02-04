@@ -18,7 +18,8 @@ export const VideoProvider = ({ children }) => {
         {
             id: 1,
             img: "/telaComunitec.jpg",
-            titulo: "Projetos de Desenvolvimento WEB #1",
+            titulo: "ComuniTec meu SITE para TCC",
+            video: "https://www.youtube.com/embed/UjBzDWapIFA?si=PR8XYkyH4iI5-JZl",
             canal: "Lucas LNS",
             visu: "56",
             duracao: "24:07",
@@ -27,7 +28,8 @@ export const VideoProvider = ({ children }) => {
         {
             id: 2,
             img: "/telaSpotify.jpg",
-            titulo: "Projetos de Desenvolvimento WEB #3",
+            titulo: "Recriação da tela do Spotify",
+            video: "https://www.youtube.com/embed/6Y8-ZSX7QHQ?si=c1h6FsrcIz8AxzXa",
             canal: "Lucas LNS",
             visu: "512",
             duracao: "24:07",
@@ -36,7 +38,8 @@ export const VideoProvider = ({ children }) => {
         {
             id: 3,
             img: "/telaEstudosApi.jpg",
-            titulo: "Projetos de Desenvolvimento WEB #2",
+            titulo: "Estudos Api Front End",
+            video: "https://www.youtube.com/embed/aP_y-mx6Q-0?si=NhGUVTyyHFy3A3xd",
             canal: "Lucas LNS",
             visu: "112",
             duracao: "24:07",

@@ -51,7 +51,9 @@
     .search input {
         display: none;
     }
-
+    .search input{
+        width: 50vw;
+    }
     .lupa {
         border-radius: 100%;
         padding: 0;
