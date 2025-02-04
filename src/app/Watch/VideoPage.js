@@ -18,7 +18,7 @@ const VideoPage = () => {
 
     const { sidebarIsOpen, toggleSidebar } = useSidebar();
     const { videos } = useVideo();
-    
+
     const videoSelected = videos.find((item) => item.id === videoId);
 
     useEffect(() => {
@@ -38,7 +38,14 @@ const VideoPage = () => {
     }
 
     if (!videoSelected) {
-        return <div>Carregando...</div>;
+        return (
+            <div className="error">
+                <h1 className='text-3xl'>Selecione um video</h1> <br />
+                <Link href="/">
+                    <button className='p-4 bg-red-600 font-bold text-2xl rounded-xl'>Voltar</button>
+                </Link>
+            </div>
+        )
     }
     if (sidebarIsOpen) {
         document.body.style.overflow = "hidden";
@@ -50,7 +57,7 @@ const VideoPage = () => {
         <div className={`video__page flex gap-4`}>
             {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}
             <div className="left flex flex-col gap-2">
-            <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
+                <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
                 {videoSelected.video ? (
                     <iframe className="video" src={videoSelected.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 ) : (
@@ -116,7 +123,7 @@ const VideoPage = () => {
                 </div>
                 <div className={`video__desc rounded-xl p-2 ${descIsOpen ? "openedDesc" : ""}`} onClick={toggleDesc}>
                     <h1 className='font-bold'>{videoSelected.visu} mil visualizações</h1>
-                    
+
                     <p>{videoSelected.desc ? videoSelected.desc : "Esse vídeo não tem descrição"}</p>
                     <br /> <br />
 

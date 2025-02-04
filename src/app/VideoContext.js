@@ -111,10 +111,46 @@ export const VideoProvider = ({ children }) => {
             logo: "https://yt3.ggpht.com/ytc/AIdro_nYZNM6UV7ex2rs1epYb-jZfoO6FemXDzLPRERbDNA0_g=s48-c-k-c0x00ffffff-no-rj"
         },
     ]
-    const [selectedVideo, setSelectedVideo] = useState(null);
-
+    const subs = [
+        {
+            id: 0,
+            url: "https://yt3.googleusercontent.com/m6s3UkM_8f4233Ayxq2NEyeJNmSMjZen3aPVhAKRyigEKi-Gw_sUMXysRA_WLEyuwq1Pw1fOVg=s160-c-k-c0x00ffffff-no-rj",
+            label: "Gaules",
+            banner: "https://yt3.googleusercontent.com/w6rj-Bpyxu98p4HBpYUZXmkubke4BM5UpKMTdVRO8G4Ijjs99p0GVAAsT4_OoVd4raqCRAXKyw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+        },
+        {
+            id: 1,
+            url: "https://yt3.googleusercontent.com/dwDfPCUX-TodIOokajuERnwzNALqfeW0zc7dZTQWzOLV8nfDIePXBhDjBpsB_VmwfnIRS1vTRw=s160-c-k-c0x00ffffff-no-rj",
+            label: "Nak"
+        },
+        {
+            id: 2,
+            url: "https://yt3.googleusercontent.com/j8tHcvLgVpYGOo9ZcEGXInqRTIYNF2O__RLvowRanAhP6NcKeKdOob5aco_iWiS5yW-KqRKOiUY=s160-c-k-c0x00ffffff-no-rj",
+            label: "30PRAUM"
+        },
+        {
+            id: 3,
+            url: "https://yt3.googleusercontent.com/VHLV1lDgJjdGmcSWVinGn-_wgVHRYOzGaRyI4js3OHyf5AZ0qBA5JZkFm6UQQgwGyEYzJHtcVnQ=s160-c-k-c0x00ffffff-no-rj",
+            label: "jogandofoddaci"
+        },
+        {
+            id: 4,
+            url: "https://yt3.googleusercontent.com/rq_ds2CbR-0X70zLDloTmgL9t_SZatRtb8t4TB11Cb51rG-TRGlKdAOF8DkwiTrB_A5SKTLb=s160-c-k-c0x00ffffff-no-rj",
+            label: "Andrezitos"
+        },
+        {
+            id: 5,
+            url: "https://yt3.googleusercontent.com/Fipf9iG1DOTVtPBTSJNKuxYEm5XISCayUcr1MgLCg5ffW-n-op4ZHGqLpOlerbDri2_AZVOH-w=s160-c-k-c0x00ffffff-no-rj",
+            label: "SolaLIVE"
+        },
+        {
+            id: 6,
+            url: "https://yt3.googleusercontent.com/ytc/AIdro_kLR5Wl0-838WZwpNJ9P90bpbAhHA5iZePEX1UDG1SlbL8=s160-c-k-c0x00ffffff-no-rj",
+            label: "Stackz / Gustavo Pinheiro"
+        },
+    ]
     return (
-        <VideoContext.Provider value={{ videos, selectedVideo, setSelectedVideo }}>
+        <VideoContext.Provider value={{ videos, subs }}>
             {children}
         </VideoContext.Provider>
     )
