@@ -30,6 +30,7 @@
     width: 100%;
     padding-right: 24px;
     flex-direction: row;
+    gap: 16px;
 }
 .subs{
     display: none;

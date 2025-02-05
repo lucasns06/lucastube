@@ -92,7 +92,7 @@ const Sidebar = () => {
                         className={`closedSpan ${sidebarIsOpen ? 'openSpan' : ''}`}
                     >
                         <img
-                            className="rounded-full mr-4"
+                            className="rounded-full"
                             src={item.url}
                             width={32}
                             height={32}

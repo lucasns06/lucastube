@@ -65,12 +65,19 @@
         display: none;
     }
 
-    .videos__container {
+    .pageVideo {
         width: 100%;
         margin: 56px auto;
         padding: 0;
     }
-
+    .videos__container{
+        padding: 0;
+    }
+    .buttons__container {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
     .thumb {
         border-radius: 0;
     }

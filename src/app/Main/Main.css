@@ -1,20 +1,29 @@
-.videos__container{
+.pageVideo {
     width: calc(100% - 72px);
     margin-left: 72px;
     margin-top: 56px;
+}
+
+.videos__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.video__card{
+.buttons__container{
+    width: 98%;
+}
+.video__card {
     cursor: pointer;
 }
-.thumb{
+
+.thumb {
     width: 100%;
     aspect-ratio: 16/9;
 }
+
 .desc img {
     width: 48px;
     height: 48px;
 }
-.container__texto h1{
+
+.container__texto h1 {
     font-weight: bold;
 }

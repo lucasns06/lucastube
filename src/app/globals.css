@@ -15,3 +15,10 @@ html, body{
   color: var(--color-primary);
   background: var(--background-primary);
 }
+.bg-secondary{
+  background: var(--background-secondary);
+}
+.width-max-content{
+  width: max-content;
+  min-width: max-content;
+}

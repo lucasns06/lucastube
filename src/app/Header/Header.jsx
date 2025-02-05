@@ -2,7 +2,7 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faMicrophone, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from "../SidebarContext";
 import { useEffect, useRef } from "react";
 
@@ -53,6 +53,9 @@ const Header = () => {
                 <input ref={buscaInput} className="px-[12]" type="text" placeholder="Pesquisar" />
                 <button ref={lupaButton} className="lupa px-[12]" onClick={mostrarBusca}>
                     <FontAwesomeIcon icon={faSearch} width={32} height={32} color="white" />
+                </button>
+                <button className="py-2 px-1 ml-4 rounded-full bg-secondary">
+                    <FontAwesomeIcon icon={faMicrophone} width={32} height={32} color="white" />
                 </button>
             </div>
             <div className="options flex items-center gap-2">
