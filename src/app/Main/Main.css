@@ -1,14 +1,31 @@
 .pageVideo {
     width: calc(100% - 72px);
     margin-left: 72px;
-    margin-top: 56px;
+    margin-top: calc(56px + 72px);
 }
-
 .videos__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .buttons__container{
-    width: 98%;
+    width: 97%;
+    position: fixed;
+    background: var(--background-primary);
+    top: 48px;
+}
+.buttons__container button{
+    transition: 0.25s ease;
+}
+.buttons__container button:hover{
+    background: rgb(255 255 255 / 20%);
+}
+.buttons__container::after{
+    position: absolute;
+    content: '';
+    right: -2;
+    top: 0;
+    width: 92px;
+    height: 100%;
+    background: linear-gradient(-90deg, var(--background-primary) 0%,  var(--background-primary) 50%, transparent 100%);
 }
 .video__card {
     cursor: pointer;

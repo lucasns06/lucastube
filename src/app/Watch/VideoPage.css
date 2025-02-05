@@ -1,6 +1,6 @@
 .video__page{
     width: calc(100% - 72px);
-    margin: 48px 72px;
+    margin: 72px 72px;
 }
 .thumb__dynamic{
     width: 100%;
@@ -41,6 +41,7 @@
     z-index: 1;
     max-height: 668px;
     aspect-ratio: 16 / 9;
+    border-radius: 18px;
 }
 .right{
     display: flex;

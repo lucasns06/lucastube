@@ -22,11 +22,35 @@ header input:focus{
     border: 1px solid rgb(74, 74, 74);
     border-radius: 0px 20px 20px 0px;
 }
-.options span{
+.options button{
     padding: 8px;
     border-radius: 100%;
     cursor: pointer;
 }
-.options span:hover{
+.options button:hover{
     background: var(--background-secondary);
+}
+.options{
+    position: relative;
+}
+.user__options{
+    position: absolute;
+    border-radius: 16px;
+    width: 280px;
+    background: #232323;
+    top: 48px;
+    left: -100%;
+}
+.border-bottom{
+    border-bottom: 1px solid var(--background-secondary);
+}
+.user__options button{
+    padding: 8px;
+    border-radius: 0;
+    width: 100%;
+}
+.rainbow{
+    color: transparent;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
 }

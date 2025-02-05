@@ -51,6 +51,9 @@
     .search input {
         display: none;
     }
+    .keyboard{
+        display: none;
+    }
     .search input{
         width: 50vw;
     }
@@ -74,8 +77,8 @@
         padding: 0;
     }
     .buttons__container {
-        padding-left: 0;
-        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
         width: 100%;
     }
     .thumb {

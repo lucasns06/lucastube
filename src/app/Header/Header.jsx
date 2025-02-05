@@ -2,11 +2,12 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowCircleUp, faBars, faBell, faMartiniGlass, faMicrophone, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleUp, faBars, faBell, faGlobe, faKeyboard, faMartiniGlass, faMicrophone, faRightFromBracket, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from "../SidebarContext";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
+    const [userOptions, setUserOptions] = useState(false);
     const { toggleSidebar } = useSidebar();
     const buscaInput = useRef();
     const lupaButton = useRef();
@@ -35,8 +36,26 @@ const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+    function toggleUserOptions() {
+        setUserOptions(prevState => !prevState);
+    }
+
+    const userOptionsList = [
+        {
+            icon: faGlobe,
+            texto: "Conta do google"
+        },
+        {
+            icon: faGlobe,
+            texto: "Mudar de conta"
+        },
+        {
+            icon: faRightFromBracket,
+            texto: "Sair"
+        },
+    ]
     return (
-        <header className="flex items-center justify-between px-[12] py-[4]">
+        <header className="flex items-center justify-between px-[12] py-[6]">
             <div className="flex gap-4">
                 <button className="menu px-[13]" onClick={toggleSidebar}>
                     <FontAwesomeIcon className="text-2xl" icon={faBars} color="white" />
@@ -49,7 +68,7 @@ const Header = () => {
                     </svg>
                 </a>
             </div>
-            <div className="search flex items-center ">
+            <div className="search flex items-center relative">
                 <input ref={buscaInput} className="px-[12]" type="text" placeholder="Pesquisar" />
                 <button ref={lupaButton} className="lupa px-[12]" onClick={mostrarBusca}>
                     <FontAwesomeIcon icon={faSearch} width={32} height={32} color="white" />
@@ -57,20 +76,58 @@ const Header = () => {
                 <button className="py-2 px-1 ml-4 rounded-full bg-secondary">
                     <FontAwesomeIcon icon={faMicrophone} width={32} height={32} color="white" />
                 </button>
+
+                <button className="keyboard absolute right-[128]">
+                    <FontAwesomeIcon icon={faKeyboard} width={32} height={32} color="white" />
+                </button>
             </div>
             <div className="options flex items-center gap-2">
-                <span>
+                <button>
                     <FontAwesomeIcon icon={faArrowCircleUp} width={32} height={32} color="white" />
-                </span>
-                <span>
+                </button>
+                <button>
                     <FontAwesomeIcon icon={faBell} width={32} height={32} color="white" />
-                </span>
+                </button>
                 <img
-                    className="rounded-full"
+                    className="rounded-full cursor-pointer"
                     src="https://avatars.githubusercontent.com/u/170823502?v=4"
-                    width={32}
-                    height={32}
+                    width={38}
+                    height={38}
+                    onClick={toggleUserOptions}
                 />
+                <div className={`user__options ${userOptions ? "block" : "hidden"}`}>
+                    <div className="border-bottom flex items-start p-4 gap-3">
+                        <img
+                            className="rounded-full cursor-pointer"
+                            src="https://avatars.githubusercontent.com/u/170823502?v=4"
+                            width={38}
+                            height={38}
+                        />
+                        <div>
+                            <p className="text-xl">Lucas LNS</p>
+                            <p>@lucasns06</p>
+                            <a href="" className="text-sky-500">Acessar seu canal</a>
+                        </div>
+                    </div>
+                    <div className="border-bottom">
+                        {userOptionsList.map((item, index) => (
+                            <button key={index} className="flex flex-col items-start">
+                                <span>
+                                    <FontAwesomeIcon icon={item.icon} width={32} height={32} color="white" />
+                                    {item.texto} </span>
+                            </button>
+                        ))}
+                    </div>
+                    <div className="flex flex-col justify-center items-center p-8">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_black" rel="noopener noreferrer">
+                            <button>
+                                <p className="rainbow" >
+                                    EASTER EGG!!!!
+                                </p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </header>
     );
