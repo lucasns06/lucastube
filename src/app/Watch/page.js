@@ -54,7 +54,88 @@ const VideoPage = () => {
     } else {
         document.body.style.overflow = "auto";
     }
-
+    const buttons = [
+        {
+            id: 0,
+            texto: "Tudo"
+        },
+        {
+            id: 2,
+            texto: "Música"
+        },
+        {
+            id: 3,
+            texto: "Jogos"
+        },
+        {
+            id: 4,
+            texto: "Mixes"
+        },
+        {
+            id: 5,
+            texto: "Programação de computadores"
+        },
+        {
+            id: 6,
+            texto: "Indie Pop"
+        },
+        {
+            id: 7,
+            texto: "Hip Hop brasileiro"
+        },
+        {
+            id: 8,
+            texto: "Programação de computadores"
+        },
+        {
+            id: 9,
+            texto: "Indie Pop"
+        },
+        {
+            id: 10,
+            texto: "Hip Hop brasileiro"
+        },
+        {
+            id: 0,
+            texto: "Tudo"
+        },
+        {
+            id: 2,
+            texto: "Música"
+        },
+        {
+            id: 3,
+            texto: "Jogos"
+        },
+        {
+            id: 4,
+            texto: "Mixes"
+        },
+        {
+            id: 5,
+            texto: "Programação de computadores"
+        },
+        {
+            id: 6,
+            texto: "Indie Pop"
+        },
+        {
+            id: 7,
+            texto: "Hip Hop brasileiro"
+        },
+        {
+            id: 8,
+            texto: "Programação de computadores"
+        },
+        {
+            id: 9,
+            texto: "Indie Pop"
+        },
+        {
+            id: 10,
+            texto: "Hip Hop brasileiro"
+        },
+    ]
     return (
         <>
             <SidebarVideo />
@@ -72,7 +153,7 @@ const VideoPage = () => {
 
                     <div className="video__options gap-2 justify-between">
                         <div className='video__options__sub gap-2 items-center'>
-                            <Link href={`/Channel?id=0`}>
+                            <Link href={`/Channel?id=7`}>
                                 <div className='flex gap-2'>
                                     <img className='rounded-full' src={videoSelected.logo} alt="logo" />
                                     <div>
@@ -138,6 +219,12 @@ const VideoPage = () => {
                     </div>
                 </div>
                 <div className="right">
+                    <div className="buttons__container flex items-center gap-2 py-4 relative overflow-hidden">
+                    <div className="buttons__container__fade"></div>
+                        {buttons.map((item, index) => (
+                            <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
+                        ))}
+                    </div>
                     {videos.map((item, index) => (
                         <Link href={`/Watch?id=${item.id}`} className="video__card__dynamic flex gap-2 relative" key={index}>
                             <div className="video__card__options__icon">

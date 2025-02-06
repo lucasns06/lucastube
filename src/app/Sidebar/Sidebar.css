@@ -11,6 +11,10 @@
     scrollbar-color: var(--background-secondary) transparent;
     z-index: 3;
 }
+.sidebarVideo{
+    top: 0;
+    max-height: 100vh;
+}
 .sidebarOpen{
     background: var(--background-primary);
 }

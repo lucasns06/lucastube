@@ -1,5 +1,6 @@
 .video__page{
-    width: clamp(80vw, 90vw, 1800px);
+    max-width: 1800px;
+    width: 80vw;
     /* width: calc(100% - 72px); */
     margin: 72px auto;
     justify-content: center;
@@ -12,7 +13,8 @@
 }
 .container__texto__dynamic h1{
     font-weight: bold;
-    max-height: 46px;
+    max-height: 48px;
+    max-width: 96%;
     overflow: hidden;
 }
 .video__options, .video__options__sub{
@@ -63,7 +65,7 @@
 .video__card__options__icon{    
     position: absolute;
     top: 0;
-    right: -20px;
+    right: 0px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -86,7 +88,7 @@
 }
 .video__icons{
     top: 4px;
-    left: 165px;
+    left: 142px;
     opacity: 0;
 }
 .video__icons svg{
@@ -103,4 +105,13 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+}
+.buttons__container__fade{
+    position: absolute;
+    content: '';
+    right: -2;
+    top: 0;
+    width: 92px;
+    height: 100%;
+    background: linear-gradient(-90deg, var(--background-primary) 0%,  var(--background-primary) 50%, transparent 100%);
 }

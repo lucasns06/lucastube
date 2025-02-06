@@ -2,13 +2,13 @@
 import './Sidebar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArchive, faArrowDown, faBell, faBible, faClock, faEye, faFire, faFlag, faGamepad, faGear, faHouse, faMusic, faNewspaper, faQuestion, faReply, faThumbsUp, faTrophy, faTv, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArchive, faArrowDown, faBars, faBell, faBible, faClock, faEye, faFire, faFlag, faGamepad, faGear, faHouse, faMusic, faNewspaper, faQuestion, faReply, faThumbsUp, faTrophy, faTv, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useSidebar } from '../SidebarContext';
 import Link from 'next/link';
 import { useVideo } from '../VideoContext';
 
 const SidebarVideo = () => {
-    const { sidebarIsOpen } = useSidebar();
+    const { sidebarIsOpen, toggleSidebar } = useSidebar();
 
     const menuItems = [
         { icon: faHouse, label: 'Inicio', href: '/' },
@@ -25,7 +25,7 @@ const SidebarVideo = () => {
     ];
 
     const { subs } = useVideo();
-    
+
     const exploreItems = [
         { icon: faFire, label: 'Em Alta' },
         { icon: faArchive, label: 'Shopping' },
@@ -45,8 +45,13 @@ const SidebarVideo = () => {
     ];
 
     return (
-        <div className={`sidebar ${sidebarIsOpen ? "sidebarOpen" : ""}`}>
-            <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
+        <div className={`sidebar sidebarVideo ${sidebarIsOpen ? "sidebarOpen" : ""}`}>
+            <div className={`hidden px-6 pt-3 pb-[0] ${sidebarIsOpen ? 'openSubs' : ''}`}>
+                <button className="menu " onClick={toggleSidebar}>
+                    <FontAwesomeIcon className="text-2xl" icon={faBars} color="white" />
+                </button>
+            </div>
+            <div className={`subs ${sidebarIsOpen ? 'openSubs border-t-0' : ''}`}>
                 {menuItems.map((item, index) => (
                     <a href={item.href}
                         key={index}
@@ -133,7 +138,7 @@ const SidebarVideo = () => {
                 ))}
             </div>
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
-            <h1 className='p-[12] font-bold'>Mais do youtube</h1>
+                <h1 className='p-[12] font-bold'>Mais do youtube</h1>
                 {options.map((item, index) => (
                     <span
                         key={index}

@@ -148,6 +148,11 @@ export const VideoProvider = ({ children }) => {
             url: "https://yt3.googleusercontent.com/ytc/AIdro_kLR5Wl0-838WZwpNJ9P90bpbAhHA5iZePEX1UDG1SlbL8=s160-c-k-c0x00ffffff-no-rj",
             label: "Stackz / Gustavo Pinheiro"
         },
+        {
+            id: 7,
+            url : "https://avatars.githubusercontent.com/u/170823502?v=4",
+            label: "Lucas LNS"
+        }
     ]
     return (
         <VideoContext.Provider value={{ videos, subs }}>

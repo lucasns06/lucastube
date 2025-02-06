@@ -7,8 +7,8 @@ import { useVideo } from '../VideoContext';
 import Link from 'next/link';
 import { useSidebar } from '../SidebarContext';
 import '../Main/Main.css'
-import '../media-queries.css'
 import Sidebar from '../Sidebar/Sidebar';
+import '../media-queries.css'
 const Channel = () => {
     const searchParams = useSearchParams();
     const channelId = parseInt(searchParams.get('id'));

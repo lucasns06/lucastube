@@ -18,12 +18,12 @@
 .buttons__container button:hover{
     background: rgb(255 255 255 / 20%);
 }
-.buttons__container::after{
+.buttons__container__fade{
     position: absolute;
     content: '';
     right: -2;
     top: 0;
-    width: 92px;
+    width: 64px;
     height: 100%;
     background: linear-gradient(-90deg, var(--background-primary) 0%,  var(--background-primary) 50%, transparent 100%);
 }

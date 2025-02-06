@@ -6,11 +6,9 @@
 }
 .banner{
     width: 100%;
-    height: 240px;
 }
 .banner__background{
     width: 100%;
-    height: 100%;
     border-radius: 18px;
 }
 .buttons__container__channel button{
@@ -22,12 +20,4 @@
 .channel__resizer{
     width: calc(100% - 266px);
     margin: 48px 266px;
-}
-@media (max-width: 1500px) {
-    .videos__container__channel {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .channel_info img{
-        max-width: 140px;
-    }
 }

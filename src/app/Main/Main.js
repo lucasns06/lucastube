@@ -99,6 +99,7 @@ const Main = () => {
             <Sidebar />
             <main className={`pageVideo ${sidebarIsOpen ? "videos__resizer" : ""}`}>
                 <div className="buttons__container flex items-center gap-2 px-6 py-4 mr-2 overflow-hidden">
+                    <div className="buttons__container__fade"></div>
                     {buttons.map((item, index) => (
                         <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
                     ))}

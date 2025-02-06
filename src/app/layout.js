@@ -2,12 +2,12 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
-import "./globals.css";
 import Header from "./Header/Header";
 import LoadingBar from "./Loading/LoadingBar";
 import { LoadingProvider } from "./LoadingContext";
 import { SidebarProvider } from "./SidebarContext";
 import { VideoProvider } from './VideoContext';
+import "./globals.css";
 
 export const metadata = {
   title: "LucasTube",
