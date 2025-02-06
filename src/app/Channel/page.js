@@ -16,12 +16,12 @@ const Channel = () => {
     const { sidebarIsOpen } = useSidebar();
 
     return (
-        <div className={`channel__container`}>
+        <div className={`channel__container ${sidebarIsOpen ? "channel__resizer" : ""}`}>
             <div className="banner">
                 <img className="banner__background" src="/banner.jpg" alt="banner" />
             </div>
             <div className="channel_info flex items-center gap-4 pt-4">
-                <img className="rounded-full" src={channelSelected.url} alt="logo" />
+                <img className="rounded-full" src={channelSelected.url} alt="logo" width={160} height={160}/>
                 <div className="channel__info__text flex flex-col gap-2">
                     <h1 className='text-4xl font-bold'>{channelSelected.label}</h1>
                     <p className='font-bold'>@{channelSelected.label} <span className='font-normal text-gray-300'>100 mil inscritos</span></p>
@@ -52,11 +52,11 @@ const Channel = () => {
                 {videos.map((item) => (
                     <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
                         <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                            <div className="container__texto">
-                                <h1>{item.titulo}</h1>
-                                <p>{item.canal}</p>
-                                <p>{item.visu} mil visualizações</p>
-                            </div>
+                        <div className="container__texto">
+                            <h1>{item.titulo}</h1>
+                            <p>{item.canal}</p>
+                            <p>{item.visu} mil visualizações</p>
+                        </div>
                     </Link >
                 ))}
             </div>

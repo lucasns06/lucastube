@@ -24,7 +24,7 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector("header");
-            if (window.scrollY > 2) {
+            if (window.scrollY > 30) {
                 header.style.background = "var(--background-primary)";
             } else {
                 header.style.background = "none";

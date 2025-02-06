@@ -1,8 +1,8 @@
 .channel__container{
-    padding-left: 10vw;
-    padding-right: 10vw;
+    max-width: 1700px;
     width: calc(100% - 72px);
     margin: 48px auto;
+    padding-left: 72px;
 }
 .banner{
     width: 100%;
@@ -19,9 +19,15 @@
 .videos__container__channel{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-@media (width < 1650px) {
-    .channel__container{
-        width: calc(100% - 72px);
-        margin: 48px 72px;
+.channel__resizer{
+    width: calc(100% - 266px);
+    margin: 48px 266px;
+}
+@media (max-width: 1500px) {
+    .videos__container__channel {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .channel_info img{
+        max-width: 140px;
     }
 }

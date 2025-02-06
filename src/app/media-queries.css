@@ -18,18 +18,23 @@
 }
 
 @media (max-width: 1080px) {
-    .right {
-        display: none;
+    .video__page {
+        flex-direction: column;
     }
-
+    .right{
+        width: 100%;
+    }
     .left {
         width: 100%;
     }
 
     .video {
         width: auto;
+        border-radius: 0;
     }
-
+    .video__card__options__icon{
+        right: 10px;
+    }
     .video__page {
         max-width: 100%;
         width: calc(100% - 72px);
@@ -70,7 +75,7 @@
 
     .pageVideo {
         width: 100%;
-        margin: 56px auto;
+        margin: 128px auto;
         padding: 0;
     }
     .videos__container{
@@ -80,6 +85,10 @@
         margin-left: 0;
         margin-right: 0;
         width: 100%;
+        padding: 0;
+    }
+    .buttons__container::after{
+        opacity: 0;
     }
     .thumb {
         border-radius: 0;

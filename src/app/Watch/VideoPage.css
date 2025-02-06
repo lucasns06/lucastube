@@ -1,14 +1,19 @@
 .video__page{
+    max-width: 90vw;
     width: calc(100% - 72px);
-    margin: 72px 72px;
+    margin-left: 72px;
+    margin-top: 72px;
 }
 .thumb__dynamic{
     width: 100%;
     aspect-ratio: 16/9;
-    max-width: 200px;
+    max-width: 180px;
+    height: 100px;
 }
 .container__texto__dynamic h1{
     font-weight: bold;
+    max-height: 46px;
+    overflow: hidden;
 }
 .video__options, .video__options__sub{
     display: flex;
@@ -18,8 +23,7 @@
     height: 48px;
 }
 .left{
-    width: 70%;
-    height: 100vh;
+    width: 100%;
     position: relative;
 }
 .blur{
@@ -47,13 +51,27 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: 30%;
+    width: 500px;
 }
 .inscrito{
     background: var(--background-secondary);
 }
 .video__card__dynamic{
     cursor: pointer;
+}
+.video__card__options__icon{    
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.video__card__options__icon span{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #ffffff;
 }
 .video__desc{
     background: var(--background-secondary);

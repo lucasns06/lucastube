@@ -18,7 +18,7 @@ const VideoPage = () => {
     const videoId = parseInt(searchParams.get('id'));
 
     const { sidebarIsOpen, toggleSidebar } = useSidebar();
-    const { videos } = useVideo();
+    const { videos, subs } = useVideo();
 
     const videoSelected = videos.find((item) => item.id === videoId);
 
@@ -69,13 +69,15 @@ const VideoPage = () => {
 
                 <div className="video__options gap-2 justify-between">
                     <div className='video__options__sub gap-2 items-center'>
-                        <div className='flex gap-2'>
-                            <img className='rounded-full' src={videoSelected.logo} alt="logo" />
-                            <div>
-                                <h1 className='font-bold'>{videoSelected.canal}</h1>
-                                <p className='text-gray-400'>{parseInt(videoSelected.visu) + 57} mil inscritos</p>
+                    <Link href={`/Channel?id=0`}>
+                            <div className='flex gap-2'>
+                                <img className='rounded-full' src={videoSelected.logo} alt="logo" />
+                                <div>
+                                    <h1 className='font-bold'>{videoSelected.canal}</h1>
+                                    <p className='text-gray-400'>{parseInt(videoSelected.visu) + 57} mil inscritos</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                         <button className="inscrito rounded-3xl py-2">
                             <FontAwesomeIcon
                                 icon={faBell}
@@ -140,6 +142,11 @@ const VideoPage = () => {
             <div className="right">
                 {videos.map((item, index) => (
                     <Link href={`/Watch?id=${item.id}`} className="video__card__dynamic flex gap-2 relative" key={index}>
+                        <div className="video__card__options__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                         <div className="video__icons absolute flex flex-col gap-2">
                             <FontAwesomeIcon
                                 className='py-2 rounded-lg'
