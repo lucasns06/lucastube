@@ -37,8 +37,6 @@
     }
     .video__page {
         max-width: 100%;
-        width: calc(100% - 72px);
-        margin: 56px 72px;
     }
 }
 

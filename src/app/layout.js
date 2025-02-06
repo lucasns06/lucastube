@@ -6,7 +6,6 @@ import "./globals.css";
 import Header from "./Header/Header";
 import LoadingBar from "./Loading/LoadingBar";
 import { LoadingProvider } from "./LoadingContext";
-import Sidebar from "./Sidebar/Sidebar";
 import { SidebarProvider } from "./SidebarContext";
 import { VideoProvider } from './VideoContext';
 
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
           <SidebarProvider>
             <LoadingProvider>
               <LoadingBar />
-              <Sidebar />
               <Header />
               {children}
             </LoadingProvider>

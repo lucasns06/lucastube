@@ -5,6 +5,7 @@ import { useSidebar } from '../SidebarContext';
 import './Main.css'
 import { useVideo } from '../VideoContext';
 import { useLoading } from '../LoadingContext';
+import Sidebar from '../Sidebar/Sidebar';
 const Main = () => {
     const { setLoading } = useLoading();
 
@@ -51,7 +52,7 @@ const Main = () => {
         {
             id: 10,
             texto: "Hip Hop brasileiro"
-        }, 
+        },
         {
             id: 0,
             texto: "Tudo"
@@ -94,41 +95,44 @@ const Main = () => {
         },
     ]
     return (
-        <main className={`pageVideo ${sidebarIsOpen ? "videos__resizer" : ""}`}>
-            <div className="buttons__container flex items-center gap-2 px-6 py-4 mr-2 overflow-hidden">
-                {buttons.map((item, index) => (
-                    <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
-                ))}
-            </div>
-            <div className={`videos__container p-6 grid gap-4`}>
-                {videos.map((item) => (
-                    <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
-                        <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                        <div className="desc flex mt-2 gap-2">
-                            <img className='rounded-full' src={item.logo} alt="logo" />
-                            <div className="container__texto">
-                                <h1>{item.titulo}</h1>
-                                <p>{item.canal}</p>
-                                <p>{item.visu} mil visualizações</p>
+        <>
+            <Sidebar />
+            <main className={`pageVideo ${sidebarIsOpen ? "videos__resizer" : ""}`}>
+                <div className="buttons__container flex items-center gap-2 px-6 py-4 mr-2 overflow-hidden">
+                    {buttons.map((item, index) => (
+                        <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
+                    ))}
+                </div>
+                <div className={`videos__container p-6 grid gap-4`}>
+                    {videos.map((item) => (
+                        <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
+                            <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
+                            <div className="desc flex mt-2 gap-2">
+                                <img className='rounded-full' src={item.logo} alt="logo" />
+                                <div className="container__texto">
+                                    <h1>{item.titulo}</h1>
+                                    <p>{item.canal}</p>
+                                    <p>{item.visu} mil visualizações</p>
+                                </div>
                             </div>
-                        </div>
-                    </Link >
-                ))}
-                {videos.map((item) => (
-                    <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
-                        <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
-                        <div className="desc flex mt-2 gap-2">
-                            <img className='rounded-full' src={item.logo} alt="logo" />
-                            <div className="container__texto">
-                                <h1>{item.titulo}</h1>
-                                <p>{item.canal}</p>
-                                <p>{item.visu} mil visualizações</p>
+                        </Link>
+                    ))}
+                    {videos.map((item) => (
+                        <Link href={`/Watch?id=${item.id}`} className="video__card" key={item.id} onClick={() => setLoading(true)}>
+                            <img src={item.img} className="thumb rounded-2xl" alt='thumb' />
+                            <div className="desc flex mt-2 gap-2">
+                                <img className='rounded-full' src={item.logo} alt="logo" />
+                                <div className="container__texto">
+                                    <h1>{item.titulo}</h1>
+                                    <p>{item.canal}</p>
+                                    <p>{item.visu} mil visualizações</p>
+                                </div>
                             </div>
-                        </div>
-                    </Link >
-                ))}
-            </div>
-        </main>
+                        </Link>
+                    ))}
+                </div>
+            </main>
+        </>
     )
 }
 export default Main;

@@ -1,8 +1,8 @@
 .video__page{
-    max-width: 90vw;
-    width: calc(100% - 72px);
-    margin-left: 72px;
-    margin-top: 72px;
+    width: clamp(80vw, 90vw, 1800px);
+    /* width: calc(100% - 72px); */
+    margin: 72px auto;
+    justify-content: center;
 }
 .thumb__dynamic{
     width: 100%;
@@ -21,10 +21,6 @@
 .video__options img {
     width: 48px;
     height: 48px;
-}
-.left{
-    width: 100%;
-    position: relative;
 }
 .blur{
     position: absolute;
@@ -47,6 +43,11 @@
     aspect-ratio: 16 / 9;
     border-radius: 18px;
 }
+.left{
+    max-width: 1800px;
+    width: 100%;
+    position: relative;
+}
 .right{
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@
 .video__card__options__icon{    
     position: absolute;
     top: 0;
-    right: 0;
+    right: -20px;
     display: flex;
     flex-direction: column;
     gap: 4px;
