@@ -21,7 +21,7 @@
 .buttons__container__fade{
     position: absolute;
     content: '';
-    right: -2;
+    right: -2px;
     top: 0;
     width: 64px;
     height: 100%;

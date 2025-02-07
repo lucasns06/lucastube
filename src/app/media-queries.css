@@ -1,176 +1,176 @@
 .videos__resizer {
-    width: calc(100vw - 300.44px);
-    margin-left: 277px;
+    width: calc(100vw - 300.44px) !important;
+    margin-left: 277px !important; 
 }
 
 .videos__resizer__page {
-    width: calc(100vw - 300.44px);
-    margin-left: 277px;
+    width: calc(100vw - 300.44px) !important;
+    margin-left: 277px !important;
 }
 
 @media (max-width: 1500px) {
     .videos__container__channel {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
     }
 
     .channel_info img {
-        max-width: 140px;
+        max-width: 140px !important;
     }
 
     .channel__info__text h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
 }
 
 @media (max-width: 1000px) {
     .videos__container__channel {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
     }
 
     .channel_info img {
-        max-width: 140px;
+        max-width: 140px !important;
     }
 
     .channel__info__text h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
 }
 
 @media (max-width: 1280px) {
     .right {
-        width: 40%;
+        width: 40% !important;
     }
 
     .left {
-        width: 60%;
+        width: 60% !important;
     }
 }
 
 @media (max-width: 1080px) {
     .video__page {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .right {
-        width: 100%;
+        width: 100% !important;
     }
 
     .left {
-        width: 100%;
+        width: 100% !important;
     }
 
     .video {
-        width: auto;
-        border-radius: 0;
+        width: auto !important;
+        border-radius: 0 !important;
     }
 
     .video__card__options__icon {
-        right: 10px;
+        right: 10px !important;
     }
 
     .video__page {
-        max-width: 100%;
+        max-width: 100% !important;
     }
 }
 
 @media (max-width: 812px) {
     .video__options {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .video__options__sub {
-        justify-content: space-between;
+        justify-content: space-between !important;
     }
     .channel_info img{
-        max-width: 100px;
+        max-width: 100px !important;
     }
     .channel__info__text h1 {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
     }
     .channel__info__text {
-        gap: 0;
+        gap: 0 !important;
     }
     .videos__container__channel {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
 @media (max-width: 612px) {
     .search input {
-        display: none;
+        display: none !important;
     }
 
     .keyboard {
-        display: none;
+        display: none !important;
     }
 
     .search input {
-        width: 50vw;
+        width: 50vw !important;
     }
 
     .lupa {
-        border-radius: 100%;
-        padding: 0;
-        background: none;
-        border: none;
+        border-radius: 100% !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
     }
 
     .sidebar {
-        display: none;
+        display: none !important;
     }
 
     .pageVideo {
-        width: 100%;
-        margin: 128px auto;
-        padding: 0;
+        width: 100% !important;
+        margin: 128px auto !important;
+        padding: 0 !important;
     }
 
     .videos__container {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .buttons__container {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        padding: 12px 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        padding: 12px 0 !important;
     }
 
     .buttons__container::after {
-        opacity: 0;
+        opacity: 0 !important;
     }
 
     .thumb {
-        border-radius: 0;
+        border-radius: 0 !important;
     }
 
     .videos__resizer {
-        width: 100%;
-        margin-top: 56px;
+        width: 100% !important;
+        margin-top: 56px !important;
     }
 
     .videos__resizer__page {
-        width: 100%;
-        margin-top: 56px;
+        width: 100% !important;
+        margin-top: 56px !important;
     }
 
     header .menu {
-        display: none;
+        display: none !important;
     }
 
     .options {
-        display: none;
+        display: none !important;
     }
 
     .video__page {
-        max-width: 100%;
-        width: 100%;
-        margin: 56px 0;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 56px 0 !important;
     }
 
     .channel__container {
-        padding: 0;
-        width: 100%;
+        padding: 0 !important;
+        width: 100% !important;
     }
 }

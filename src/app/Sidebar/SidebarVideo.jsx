@@ -90,7 +90,7 @@ const SidebarVideo = () => {
                 ))}
             </div>
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
-                <h1 className='p-[12] font-bold'>Inscrições</h1>
+                <h1 className='p-[12px] font-bold'>Inscrições</h1>
                 {subs.map((item) => (
                     <Link href={`/Channel?id=${item.id}`}
                         key={item.id}
@@ -114,12 +114,12 @@ const SidebarVideo = () => {
                         height={32}
                         color="white"
                     />
-                    <p className='p-[12]'>Mostrar mais</p>
+                    <p className='p-[12px]'>Mostrar mais</p>
                 </span>
             </div>
 
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
-                <h1 className='p-[12] font-bold'>Explorar</h1>
+                <h1 className='p-[12px] font-bold'>Explorar</h1>
                 {exploreItems.map((item, index) => (
                     <span
                         key={index}
@@ -138,7 +138,7 @@ const SidebarVideo = () => {
                 ))}
             </div>
             <div className={`subs ${sidebarIsOpen ? 'openSubs' : ''}`}>
-                <h1 className='p-[12] font-bold'>Mais do youtube</h1>
+                <h1 className='p-[12px] font-bold'>Mais do youtube</h1>
                 {options.map((item, index) => (
                     <span
                         key={index}

@@ -9,9 +9,8 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLoading } from '../LoadingContext';
 import Link from 'next/link';
-import '../media-queries.css'
 import SidebarVideo from '../Sidebar/SidebarVideo';
-
+import '../media-queries.css'
 const VideoPage = () => {
     const { setLoading } = useLoading();
 
@@ -29,7 +28,7 @@ const VideoPage = () => {
 
     useEffect(() => {
         if (videoSelected) {
-            document.title = `${videoSelected.titulo} - Meu YouTube Clone`;
+            document.title = `${videoSelected.titulo}`;
         }
     }, [videoSelected]);
 
@@ -219,8 +218,8 @@ const VideoPage = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <div className="buttons__container flex items-center gap-2 py-4 relative overflow-hidden">
-                    <div className="buttons__container__fade"></div>
+                    <div className="buttons__container__dois flex items-center gap-2 py-4 relative overflow-hidden">
+                    <div className="buttons__container__fade2"></div>
                         {buttons.map((item, index) => (
                             <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
                         ))}

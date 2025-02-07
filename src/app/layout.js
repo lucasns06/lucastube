@@ -8,6 +8,7 @@ import { LoadingProvider } from "./LoadingContext";
 import { SidebarProvider } from "./SidebarContext";
 import { VideoProvider } from './VideoContext';
 import "./globals.css";
+import './media-queries.css';
 
 export const metadata = {
   title: "LucasTube",

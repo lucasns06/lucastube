@@ -2,23 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
-:root{
+
+:root {
   --background-primary: #0f0f0f;
   --background-secondary: rgb(255 255 255 / 10%);
   --color-primary: white;
 }
-html, body{
+
+html,
+body {
   color: var(--color-primary);
   background: var(--background-primary);
 }
-.bg-secondary{
+
+.bg-secondary {
   background: var(--background-secondary);
 }
-.width-max-content{
+
+.width-max-content {
   width: max-content;
   min-width: max-content;
 }

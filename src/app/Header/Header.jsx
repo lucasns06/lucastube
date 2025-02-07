@@ -55,9 +55,9 @@ const Header = () => {
         },
     ]
     return (
-        <header className="flex items-center justify-between px-[12] py-[6]">
+        <header className="flex items-center justify-between px-[12px] py-[6px]">
             <div className="flex gap-4">
-                <button className="menu px-[13]" onClick={toggleSidebar}>
+                <button className="menu px-[13px]" onClick={toggleSidebar}>
                     <FontAwesomeIcon className="text-2xl" icon={faBars} color="white" />
                 </button>
                 <a href="/">
@@ -69,15 +69,15 @@ const Header = () => {
                 </a>
             </div>
             <div className="search flex items-center relative">
-                <input ref={buscaInput} className="px-[12]" type="text" placeholder="Pesquisar" />
-                <button ref={lupaButton} className="lupa px-[12]" onClick={mostrarBusca}>
+                <input ref={buscaInput} className="px-[12px]" type="text" placeholder="Pesquisar" />
+                <button ref={lupaButton} className="lupa px-[12px]" onClick={mostrarBusca}>
                     <FontAwesomeIcon icon={faSearch} width={32} height={32} color="white" />
                 </button>
                 <button className="py-2 px-1 ml-4 rounded-full bg-secondary">
                     <FontAwesomeIcon icon={faMicrophone} width={32} height={32} color="white" />
                 </button>
 
-                <button className="keyboard absolute right-[128]">
+                <button className="keyboard absolute right-[128px]">
                     <FontAwesomeIcon icon={faKeyboard} width={32} height={32} color="white" />
                 </button>
             </div>
