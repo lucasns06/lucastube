@@ -1,6 +1,6 @@
 .video__page{
     max-width: 1800px;
-    width: 80vw;
+    width: 90vw;
     /* width: calc(100% - 72px); */
     margin: 72px auto;
     justify-content: center;
@@ -24,18 +24,18 @@
     width: 48px;
     height: 48px;
 }
-/* .blur{
+.blur{
     position: absolute;
-    content: '';
-    width: 101%;
+    content: "";
+    width: 50%;
     height: 63%;
-    top: -30;
-    left: 0;
+    top: 30px;
+    left: 72px;
     z-index: 0;
     background-color: var(--background-secondary);
-    opacity: 0.8;
+    opacity: .8;
     filter: blur(40px);
-} */
+}
 .blurOpacity{
     opacity: 0;
 }

@@ -63,6 +63,8 @@ export const VideoProvider = ({ children }) => {
             id: 5,
             img: "/telaYoutube.jpg",
             titulo: "Refazendo o LAYOUT do YOUTUBE",
+            video: "https://www.youtube.com/embed/hFeFIIVaNCw?si=L5APlcvaLnY_6EsW",
+            desc: "Recriação do youtube para aprendizado front end, com nextjs.",
             canal: "Lucas LNS",
             visu: "882",
             duracao: "24:07",

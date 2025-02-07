@@ -139,9 +139,9 @@ const VideoPage = () => {
         <>
             <SidebarVideo />
             <div className={`video__page flex gap-4`}>
+            <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
                 {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}
                 <div className="left flex flex-col gap-2">
-                    <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
                     {videoSelected.video ? (
                         <iframe className="video" src={videoSelected.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     ) : (
