@@ -48,11 +48,15 @@ const VideoPage = () => {
             </div>
         )
     }
-    if (sidebarIsOpen) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "auto";
-    }
+
+    useEffect(() => {
+        if (sidebarIsOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [sidebarIsOpen])
+
     const buttons = [
         {
             id: 0,
@@ -139,7 +143,7 @@ const VideoPage = () => {
         <>
             <SidebarVideo />
             <div className={`video__page flex gap-4`}>
-            <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
+                <div className={`blur ${sidebarIsOpen ? "blurOpacity" : ""}`}></div>
                 {sidebarIsOpen ? <div className='overlay' onClick={toggleSidebar}></div> : ""}
                 <div className="left flex flex-col gap-2">
                     {videoSelected.video ? (
@@ -219,7 +223,7 @@ const VideoPage = () => {
                 </div>
                 <div className="right">
                     <div className="buttons__container__dois flex items-center gap-2 py-4 relative overflow-hidden">
-                    <div className="buttons__container__fade2"></div>
+                        <div className="buttons__container__fade2"></div>
                         {buttons.map((item, index) => (
                             <button key={index} className='bg-secondary p-2 font-medium rounded-xl width-max-content'>{item.texto}</button>
                         ))}
