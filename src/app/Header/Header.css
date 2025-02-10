@@ -5,11 +5,17 @@ header {
     left: 0;
     z-index: 3;
 }
+.youtubeIcon .path2{
+    fill: white;
+}
+.youtubeIcon .path1{
+    fill: red;
+}
 header input{
     padding: 6px;
     border-radius: 20px 0px 0px 20px;
     width: 32vw;
-    border: 1px solid rgb(74, 74, 74);
+    border: 1px solid #959595;
     background: none;
 }
 header input:focus{
@@ -19,7 +25,7 @@ header input:focus{
 .lupa{
     height: 38px;
     background: var(--background-secondary);
-    border: 1px solid rgb(74, 74, 74);
+    border: 1px solid #959595;
     border-radius: 0px 20px 20px 0px;
 }
 .options button{
@@ -37,7 +43,7 @@ header input:focus{
     position: absolute;
     border-radius: 16px;
     width: 280px;
-    background: #232323;
+    background: var(--background-primary);
     top: 48px;
     left: -100%;
 }

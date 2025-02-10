@@ -6,14 +6,21 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-:root {
+:root{
+  --background-primary: #fff;
+  --background-secondary: rgba(0, 0, 0, 0.05);
+  --button-hover: rgba(0, 0, 0, 0.10);
+  --color-primary: black;
+}
+.dark-theme {
   --background-primary: #0f0f0f;
   --background-secondary: rgb(255 255 255 / 10%);
+  --button-hover: rgba(255, 255, 255, 20%);
   --color-primary: white;
 }
-
-html,
+svg path{
+  fill: var(--color-primary);
+}
 body {
   color: var(--color-primary);
   background: var(--background-primary);

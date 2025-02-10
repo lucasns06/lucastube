@@ -27,6 +27,9 @@
     width: 72px;
     border-radius: 16px;
 }
+.closedSpan svg path{
+    fill: var(--color-primary);
+}
 .sidebar span:hover, .sidebar a:hover{
     background: var(--background-secondary);
 }

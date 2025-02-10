@@ -16,7 +16,7 @@
     transition: 0.25s ease;
 }
 .buttons__container button:hover{
-    background: rgb(255 255 255 / 20%);
+    background: var(--button-hover);
 }
 .buttons__container__fade{
     position: absolute;

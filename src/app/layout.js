@@ -9,6 +9,7 @@ import { SidebarProvider } from "./SidebarContext";
 import { VideoProvider } from './VideoContext';
 import "./globals.css";
 import './media-queries.css';
+import { ThemeProvider } from './ThemeContext';
 
 export const metadata = {
   title: "LucasTube",
@@ -17,18 +18,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <VideoProvider>
-          <SidebarProvider>
-            <LoadingProvider>
-              <LoadingBar />
-              <Header />
-              {children}
-            </LoadingProvider>
-          </SidebarProvider>
-        </VideoProvider>
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <body>
+          <VideoProvider>
+            <SidebarProvider>
+              <LoadingProvider>
+                <LoadingBar />
+                <Header />
+                {children}
+              </LoadingProvider>
+            </SidebarProvider>
+          </VideoProvider>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

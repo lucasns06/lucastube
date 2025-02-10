@@ -59,6 +59,9 @@
 .inscrito{
     background: var(--background-secondary);
 }
+.video__icons svg path{
+    fill: white;
+}
 .video__card__dynamic{
     cursor: pointer;
 }
