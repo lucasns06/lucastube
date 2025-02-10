@@ -18,9 +18,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ThemeProvider>
-      <html lang="en">
-        <body>
+
+    <html lang="en">
+      <body>
+        <ThemeProvider>
           <VideoProvider>
             <SidebarProvider>
               <LoadingProvider>
@@ -30,8 +31,8 @@ export default function RootLayout({ children }) {
               </LoadingProvider>
             </SidebarProvider>
           </VideoProvider>
-        </body>
-      </html>
-    </ThemeProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

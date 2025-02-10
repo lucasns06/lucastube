@@ -4,9 +4,12 @@ import { useContext, createContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const savedTheme = localStorage.getItem("isDarkTheme") === "true";
+    const [isDark, setIsDark] = useState(false);
 
-    const [isDark, setIsDark] = useState(savedTheme);
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("isDarkTheme") === "true";
+        setIsDark(savedTheme)
+    }, [])
 
     const toggleTheme = () => {
         setIsDark(prevState => !prevState);
